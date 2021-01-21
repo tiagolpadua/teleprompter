@@ -1,0 +1,17 @@
+#main {
+    background-color: #000000;
+    color: #ffffff;
+    height: 100vh;
+}
+
+.previous {
+    font-size: 20px;
+}
+
+.current {
+    font-size: 80px;
+}
+
+.next {
+    font-size: 50px;
+}

@@ -1,0 +1,32 @@
+<div class="jumbotron text-center">
+    <h1>Teleprompter!</h1>
+    <p>A simple telepromter to your needs</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <h3>Text Source URL</h3>
+            <form (ngSubmit)="telepromt()" #teleForm="ngForm">
+                <div class="form-group">
+                    <input type="text" [(ngModel)]="url" name="url" class="form-control" id="url"
+                        placeholder="Enter URL" required>
+                </div>
+                <button class="btn btn-primary" [disabled]="!teleForm.form.valid">Teleprompt it!</button>
+            </form>
+        </div>
+        <!-- <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>
+      <p>Lorem ipsum dolor..</p>
+    </div> -->
+    </div>
+</div>
