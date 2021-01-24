@@ -16,7 +16,7 @@ export class TelepromptComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.lines = (this.dataService.getData() || '').split('\n\n');
+    this.lines = (this.dataService.getData() || '').split('\n');
     this.lines.unshift('');
   }
 

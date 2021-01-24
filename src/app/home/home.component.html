@@ -1,32 +1,50 @@
 <div class="jumbotron text-center">
-    <h1>Teleprompter!</h1>
-    <p>A simple telepromter to your needs</p>
+  <h1>Teleprompter!</h1>
+  <p>A simple telepromter to your needs</p>
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8">
-            <h3>Text Source URL</h3>
-            <form (ngSubmit)="telepromt()" #teleForm="ngForm">
-                <div class="form-group">
-                    <input type="text" [(ngModel)]="url" name="url" class="form-control" id="url"
-                        placeholder="Enter URL" required>
-                </div>
-                <button class="btn btn-primary" [disabled]="!teleForm.form.valid">Teleprompt it!</button>
-            </form>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <h3>Text Source URL</h3>
+      <form (ngSubmit)="telepromtURL()" #teleFormURL="ngForm">
+        <div class="form-group">
+          <input
+            type="text"
+            [(ngModel)]="url"
+            name="url"
+            class="form-control"
+            id="url"
+            placeholder="Enter URL"
+            required
+          />
         </div>
-        <!-- <div class="col-sm-4">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor..</p>
+        <button class="btn btn-primary" [disabled]="!teleFormURL.form.valid">
+          Teleprompt it!
+        </button>
+      </form>
     </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor..</p>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <h3>Text Source URL</h3>
+      <form (ngSubmit)="telepromtText()" #teleFormText="ngForm">
+        <div class="form-group">
+          <textarea
+            class="form-control"
+            [(ngModel)]="text"
+            rows="20"
+            name="text"
+            required
+          ></textarea>
+        </div>
+        <button class="btn btn-primary" [disabled]="!teleFormText.form.valid">
+          Teleprompt it!
+        </button>
+      </form>
     </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div> -->
-    </div>
+  </div>
 </div>
