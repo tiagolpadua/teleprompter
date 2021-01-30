@@ -2,11 +2,9 @@
   <div class="row">
     <div class="col-sm-12">
       <h6>&nbsp;</h6>
-      <p
-        [ngClass]="{ i: true, previous: i == 0, current: i == 1, next: i > 1 }"
-        *ngFor="let line of lines.slice(curline); index as i"
-      >
-        {{ line }}
+      <p [ngClass]="{ i: true, previous: i == 0, current: i == 1, next: i > 1 }"
+        *ngFor="let line of lines.slice(curline); index as i">
+        <span style="font-size: 10px;">{{curline + i}}/{{lines.length}}</span> {{ line }}
       </p>
     </div>
   </div>
